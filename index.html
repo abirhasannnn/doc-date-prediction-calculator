@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc Date Prediction Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="base">
+        <h4>Doc Date Prediction Calculator</h4>
+      </div>
+
+      <!-- From -->
+      <div class="doc-given-upto">
+        <p class="title">Last Doc Mail Given Upto</p>
+        <div class="block">
+          <input
+            type="number"
+            name="date"
+            id="date1"
+            placeholder="DD"
+            required="required"
+            min="1"
+            max="31"
+          />
+        </div>
+        <div class="block">
+          <input
+            type="number"
+            name="month"
+            id="month1"
+            placeholder="MM"
+            required="required"
+            min="1"
+            max="12"
+          />
+        </div>
+        <div class="block">
+          <input
+            type="number"
+            name="year"
+            id="year1"
+            placeholder="YYYY"
+            required="required"
+            min="2023"
+            max="2025"
+          />
+        </div>
+      </div>
+      <!-- To -->
+      <div class="my-date">
+        <p class="title">Your Appointment Date</p>
+        <div class="block">
+          <input
+            type="number"
+            name="date"
+            id="date2"
+            placeholder="DD"
+            required="required"
+            min="1"
+            max="31"
+          />
+        </div>
+        <div class="block">
+          <input
+            type="number"
+            name="month"
+            id="month2"
+            placeholder="MM"
+            required="required"
+            min="1"
+            max="12"
+          />
+        </div>
+        <div class="block">
+          <input
+            type="number"
+            name="year"
+            id="year2"
+            placeholder="YYYY"
+            required="required"
+            min="2023"
+            max="2025"
+          />
+        </div>
+      </div>
+
+      <!-- Last Doc Date -->
+      <div class="last-doc-date">
+        <p class="title">Last Doc Mail Date</p>
+        <div class="block">
+          <input
+            type="number"
+            name="date"
+            id="date3"
+            placeholder="DD"
+            required="required"
+            min="1"
+            max="31"
+          />
+        </div>
+        <div class="block">
+          <input
+            type="number"
+            name="month"
+            id="month3"
+            placeholder="MM"
+            required="required"
+            min="1"
+            max="12"
+          />
+        </div>
+        <div class="block">
+          <input
+            type="number"
+            name="year"
+            id="year3"
+            placeholder="YYYY"
+            required="required"
+            min="2023"
+            max="2025"
+          />
+        </div>
+      </div>
+
+      <!-- Number of days -->
+      <div class="number-of-days">
+        <p class="title">Number Of Days Cover In One Month Doc</p>
+        <div class="block">
+          <input
+            type="number"
+            name="numberOfDays"
+            id="numberOfDays"
+            placeholder="Days"
+            required="required"
+          />
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="submit-buton">
+        <input type="button" name="submit" value="Submit" onclick="cal()" />
+      </div>
+
+      <!-- Show -->
+      <div id="time"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
