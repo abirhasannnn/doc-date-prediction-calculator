@@ -59,5 +59,6 @@ function cal() {
   document.getElementById(
     "time"
   ).innerHTML = `Your Doc Arrival Approximate Date <br> ${yDocD}/${yDocM}/${yDocYear}<br>
-                (Waiting Period: ${yx} Years ${mx} Month ${dx} Days)`;
+                (Waiting Period: ${yx} Years ${mx} Months ${dx} Days)`;
 }
+
