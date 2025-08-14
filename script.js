@@ -39,7 +39,7 @@ function cal() {
   let remaningMonth = totalMonth % 12;
 
   let yDocYear = Math.floor(y3 + totalYear + (m3 + remaningMonth) / 12);
-  let yDocM = (m3 + remaningMonth) % 12;
+  let yDocM = (m3 + remaningMonth) % 12 || 1;
   let yDocD = 10;
 
   let yDocDx = yDocD;
@@ -65,3 +65,4 @@ function cal() {
   ).innerHTML = `Your Doc Arrival Approximate Date <br> ${yDocD}/${yDocM}/${yDocYear}<br>
                 (Waiting Period: ${yx} Years ${mx} Months ${dx} Days)`;
 }
+
