@@ -7,6 +7,10 @@ function cal() {
   let m2 = Number(document.getElementById("month2").value);
   let y2 = Number(document.getElementById("year2").value);
 
+  let d2x = d2;
+  let m2x = m2;
+  let y2x = y2;
+
   let d3 = Number(document.getElementById("date3").value);
   let m3 = Number(document.getElementById("month3").value);
   let y3 = Number(document.getElementById("year3").value);
@@ -42,23 +46,22 @@ function cal() {
   let yDocMx = yDocM;
   let yDocYearx = yDocYear;
 
-  if (d2 > yDocDx) {
+  if (d2x > yDocDx) {
     yDocDx = yDocDx + month[yDocMx - 1];
     yDocMx = yDocMx - 1;
   }
 
-  if (m2 > yDocMx) {
+  if (m2x > yDocMx) {
     yDocMx = yDocMx + 12;
     yDocYearx = yDocYearx - 1;
   }
 
-  let dx = yDocDx - d2;
-  let mx = yDocMx - m2;
-  let yx = yDocYearx - y2;
+  let dx = yDocDx - d2x;
+  let mx = yDocMx - m2x;
+  let yx = yDocYearx - y2x;
 
   document.getElementById(
     "time"
   ).innerHTML = `Your Doc Arrival Approximate Date <br> ${yDocD}/${yDocM}/${yDocYear}<br>
                 (Waiting Period: ${yx} Years ${mx} Months ${dx} Days)`;
 }
-
