@@ -11,10 +11,16 @@ function cal() {
   let m2x = m2;
   let y2x = y2;
 
-  const date = new Date();
+ const date = new Date();
+  let d3 = date.getDate();
+  let m3;
 
-  let d3 = 10;
-  let m3 = date.getMonth() + 1;
+  if (d3 <= 10) {
+    m3 = date.getMonth();
+  } else {
+    m3 = date.getMonth() + 1;
+  }
+
   let y3 = date.getFullYear();
 
   let numberOfDays = Number(document.getElementById("numberOfDays").value);
@@ -67,5 +73,6 @@ function cal() {
   ).innerHTML = `Your Doc Arrival Approximate Date <br> ${yDocD}/${yDocM}/${yDocYear}<br>
                 (Waiting Period: ${yx} Years ${mx} Months ${dx} Days)`;
 }
+
 
 
